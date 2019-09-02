@@ -1,6 +1,7 @@
 .container1 {
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 375px;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -15,6 +16,12 @@
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+img {
+  border-radius: 8px;
+  height: 300px;
+  width: 300px;
 }
 
 .zone {
