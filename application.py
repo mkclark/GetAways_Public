@@ -25,7 +25,3 @@ def create_app(**config_overrides):
     app.register_blueprint(booking_app)
 
     return app
-
-if __name__ == '__main__':
-    app.debug=True
-    app.run()
