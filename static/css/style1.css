@@ -8,6 +8,41 @@
   font-size: 2em;
 }
 
+.page-header {
+  margin-left: 25px;
+}
+
+#search_box {
+    position:relative;
+    padding:1px;
+    margin-left:25px;
+    margin-right:1px;
+    background:#ddd;
+    direction: ltr;
+    width:300px;
+}
+#search_input {
+    height:30px;
+    margin-left:0px;
+    padding-right: 1px;
+    width: 100%;
+}
+#search_box_img {
+    position:absolute;
+    bottom:2px;
+    right:265px;
+    width:24px;
+    height:24px;
+}
+
+/* .search-box {
+  margin-left: 25px;
+  border-radius: 5px;
+  width: 350px;
+  height: 40px;
+} */
+
+
 .container1 {
   display: grid;
   grid-template-columns: 100%;
