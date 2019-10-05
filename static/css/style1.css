@@ -14,6 +14,7 @@
 
 #search_box {
     position:relative;
+    border-radius: 10px;
     padding:1px;
     margin-left:25px;
     margin-right:1px;
@@ -22,53 +23,150 @@
     width:300px;
 }
 #search_input {
-    height:30px;
+    border-radius: 10px;
+    height:40px;
     margin-left:0px;
     padding-right: 1px;
     width: 100%;
 }
 #search_box_img {
     position:absolute;
-    bottom:2px;
-    right:265px;
-    width:24px;
-    height:24px;
+    bottom: 6px;
+    right: 265px;
+    width: 29px;
+    height: 29px;
 }
 
-/* .search-box {
-  margin-left: 25px;
-  border-radius: 5px;
-  width: 350px;
-  height: 40px;
-} */
+#search_box_2 {
+    position:relative;
+    border-radius: 10px;
+    padding: 1px;
+    margin-left: 25px;
+    background: #ddd;
+    direction: ltr;
+    height: 50px;
+    width: 400px;
 
+}
+
+#search_input_2 {
+    border-radius: 10px;
+    margin-left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  transform: translate3d(0, -10px, 0); /* vertically aligns the where placeholder */
+}
+
+#startdatepicker_box {
+  position: relative;
+  border-radius: 10px;
+  margin-left: 50px;
+  height: 50px;
+  width: 200px;
+}
+
+#enddatepicker_box {
+  position: relative;
+  border-radius: 10px;
+  margin-left: 50px;
+  height: 50px;
+  width: 200px;
+}
+
+#startdatepicker_input {
+  display: block;
+  border-radius: 10px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+
+}
+
+#enddatepicker_input {
+  display: block;
+  border-radius: 10px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+
+}
+
+#calendar_img {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+#startdatepicker_input::-webkit-input-placeholder {
+  transform: translate3d(50px, 0px, 0);
+}
+
+#enddatepicker_input::-webkit-input-placeholder {
+  transform: translate3d(50px, 0px, 0);
+}
+
+#guests_box {
+  position: relative;
+  border-radius: 10px;
+  margin-left: 50px;
+  height: 50px;
+  width: 200px;
+}
+
+#guests_input {
+  display: block;
+  border-radius: 10px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+
+}
 
 .container1 {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 375px;
+  height: 500px;
+  display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+#temp_map {
+  max-width: 100%;
+  width: 2500px;
+  height: 500px;
+  max-height: 100%;
+  flex-grow: 2;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: all 0.3s linear;
 }
 
 .container2 {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 20px;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  top: 30px;
+  margin-top: 30px;
   margin-bottom: 20px;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 80px;
 }
 
 .zone {
-  text-align: center;
-  font-family: 'Chilanka', serif;
-  font-size: 2em;
+  text-align: left;
+  /* font-family: 'Chilanka', serif; */
+  /* font-size: 2em; */
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid #FFFFFF;
   transition: all 0.3s linear;
 }
 
@@ -79,5 +177,65 @@ img {
 }
 
 p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}
 
+.search-results-container {
+  height: 200px;
+  width: 600px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 10px 10px grey;
+}
+
+#search-results-box1 {
+  margin-top: 75px;
+  margin-left: 25px;
+}
+
+#search-results-box2 {
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+#search-results-box3 {
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+#search-results-box4 {
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+.search-results-map {
+
+  float: right;
+  height: 700px;
+  width: 600px;
+  margin-top: 75px;
+  margin-left: 75px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.flex-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
 }

@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>GetAways</title>
@@ -6,52 +6,75 @@
   <link rel="stylesheet" type="text/css" href="../static/css/style1.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Chilanka">
 <body>
-    <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact;">GetAways</font></h1>
+    <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;">GetAways</font></h1>
   <div id="search_box">
       <input type="text" id="search_input" value>
       <img src="../static/img/spyglass.png" id="search_box_img">
   </div>
 
   <div class="container1">
-    <div class="zone">
-      <p><i>insert map here</i></p>
+    <div id="map_box">
+      <img id="temp_map" src="{{ url_for('static', filename='img/south_pacific_map.jpg') }}">
     </div>
   </div>
   <div class="container2">
     <div class="zone">
-      <img src="{{url_for('static', filename='mantaray_island_resort.jpeg')}}">
+      <img src="{{ url_for('static', filename='img/mantaray_island_resort.jpeg') }}">
+      <br>
+      <br>
       <p>Mantaray Island Resort</p>
+      <p><strong>$52/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='south_sea_island_accomodation.jpeg')}}">
+      <img src="{{ url_for('static', filename='img/south_sea_island_accomodation.jpeg') }}">
+      <br>
+      <br>
       <p>South Sea Island Accomodation</p>
+      <p><strong>$100/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='funky_fish_beach_surf_resort.jpg')}}">
+      <img src="{{url_for('static', filename='img/funky_fish_beach_surf_resort.jpg')}}">
+      <br>
+      <br>
       <p>Funky Fish Beach Surf Resort</p>
+      <p><strong>$52/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='the_beachouse.jpg')}}">
+      <img src="{{url_for('static', filename='img/the_beachouse.jpg')}}">
+      <br>
+      <br>
       <p>The Beachouse</p>
+      <p><strong>$54/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='tropica_island_resort.png')}}">
+      <img src="{{url_for('static', filename='img/IncredibleSeafrontStudio.webp')}}">
+      <br>
+      <br>
+      <p>Incredible Seafront Studio</p>
+      <p><strong>$70/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='bamboo_backpackers.jpg')}}">
+      <img src="{{url_for('static', filename='img/HotelZone.webp')}}">
+      <br>
+      <br>
+      <p>HOTEL ZONE -- BEACHFRONT ROOM #212</p>
+      <p><strong>$51/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='maravu_taveuni_lodge.webp')}}">
+      <img src="{{url_for('static', filename='img/amplio.webp')}}">
+      <br>
+      <br>
+      <p>amplio estudio en la playa</p>
+      <p><strong>$50/night</strong></p>
     </div>
     <div class="zone">
-      <img src="{{url_for('static', filename='horizon_beach_resort.jpg')}}">
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='hilton_fiji_beach_resort_and_spa.jpeg')}}">
+      <img src="{{url_for('static', filename='img/Casatotalmente.webp')}}">
+      <br>
+      <br>
+      <p>Casa totalmente equipada</p>
+      <p><strong>$35/night</strong></p>
     </div>
   </div>
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
