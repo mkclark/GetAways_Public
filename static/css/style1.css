@@ -172,7 +172,7 @@ input::-webkit-input-placeholder {
 
 img {
   border-radius: 8px;
-  height: 300px;
+  height: 100%;
   width: 300px;
 }
 
@@ -191,8 +191,38 @@ p {
 }
 
 #search-results-box1 {
+  display: flex;
   margin-top: 75px;
   margin-left: 25px;
+}
+
+#img-searchresults-1 {
+  width: 250px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#results-name-1 {
+  display: flex;
+  margin-left: 10px;
+
+}
+
+#results-apt-details-1 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#results-price-1 {
+  margin-left: 10px;
+}
+
+#results-greybar-1 {
+  height: 50px;
+  width: 345px;
+  margin-top: 80px;
+  border-bottom-right-radius: 10px;
+  background-color: #D8D8D8;
 }
 
 #search-results-box2 {
@@ -200,14 +230,108 @@ p {
   margin-left: 25px;
 }
 
+#search-results-box2 {
+  display: flex;
+  margin-top: 75px;
+  margin-left: 25px;
+}
+
+#img-searchresults-2 {
+  width: 250px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#results-name-2 {
+  display: flex;
+  margin-left: 10px;
+
+}
+
+#results-apt-details-2 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#results-price-2 {
+  margin-left: 10px;
+}
+
+#results-greybar-2 {
+  height: 50px;
+  width: 345px;
+  margin-top: 80px;
+  border-bottom-right-radius: 10px;
+  background-color: #D8D8D8;
+}
+
 #search-results-box3 {
+  display: flex;
   margin-top: 50px;
   margin-left: 25px;
 }
 
+#img-searchresults-3 {
+  width: 250px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#results-name-3 {
+  display: flex;
+  margin-left: 10px;
+}
+
+#results-apt-details-3 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#results-price-3 {
+  margin-left: 10px;
+}
+
+#results-greybar-3 {
+  height: 50px;
+  width: 345px;
+  margin-top: 80px;
+  border-bottom-right-radius: 10px;
+  background-color: #D8D8D8;
+}
+
 #search-results-box4 {
+  display: flex;
   margin-top: 50px;
   margin-left: 25px;
+}
+
+#img-searchresults-4 {
+  width: 250px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#results-name-4 {
+  display: flex;
+  margin-left: 10px;
+
+}
+
+#results-apt-details-4 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#results-price-4 {
+  margin-left: 10px;
+}
+
+#results-greybar-4 {
+  height: 50px;
+  width: 345px;
+  margin-top: 80px;
+  border-bottom-right-radius: 10px;
+  background-color: #D8D8D8;
 }
 
 .search-results-map {
@@ -228,6 +352,12 @@ p {
   flex-wrap: wrap;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
 .flex-container-left {
   display: flex;
   flex-direction: column;
@@ -238,4 +368,47 @@ p {
   display: flex;
   flex-direction: column;
   align-items: right;
+}
+
+.search-details-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-details-img-1 {
+  display: flex;
+  height: 80px;
+  width: 900px;
+  flex: 1;
+}
+
+.search-details-img-2 {
+  display: flex;
+  height: 40px;
+  width: 540px;
+  flex: 1;
+}
+
+.search-details-img-3 {
+  display: flex;
+  height: 40px;
+  width: 540px;
+  flex: 1;
+}
+
+#reservation-box {
+  outline-style: solid;
+  outline-color: grey;
+  margin-left: 1000px;
+  width: 500px;
+}
+
+#reservation-button {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  height: 50px;
+  width: 450px;
+  background-color: #F04F19;
+  border-radius: 10px;
 }

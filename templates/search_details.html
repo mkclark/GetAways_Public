@@ -1,0 +1,179 @@
+<html>
+<head>
+  <title>GetAways</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../static/css/style1.css">
+
+<body>
+    <div class="row">
+      <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;">GetAways</font></h1>
+    </div>
+    <div class="row">
+      <div id="search_box_2" style="float:left;">
+          <input type="text" id="search_input_2" placeholder="Where">
+      </div>
+      <div id="startdatepicker_box" style="float:left;">
+          <img src="../static/img/calendar_icon.png" id="calendar_img">
+          <input placeholder="Check In" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="startdatepicker_input" class="datepicker">
+      </div>
+      <div id="enddatepicker_box" style="float:left;">
+          <img src="../static/img/calendar_icon.png" id="calendar_img">
+          <input placeholder="Check Out" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="enddatepicker_input" class="datepicker">
+      </div>
+      <div id="guests_box" style="float:left;">
+          <input placeholder="Guests" type="number" id="guests_input">
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="search-details-container">
+      <div class="row">
+        <div class="column">
+            <img src="../static/img/s_d_01.webp" class="search-details-img-1">
+        </div>
+        <div class="column">
+            <img src="../static/img/s_d_02.webp" class="search-details-img-2">
+            <img src="../static/img/s_d_03.webp" class="search-details-img-3">
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2 style="font-family: Courier New; margin-left: 25px;">Cancun Beachfront Condominium Apartment on the Hotel Zone excellent location</h2>
+    <br>
+    <div class="search-details-container" style="justify-content: left;">
+      <div class="row" style="margin-left: 25px;">
+        <div class="column">
+          <p>Apartment</p>
+          <p>Sleeps: 4</p>
+          <p>Bedrooms: 2</p>
+          <p>Min Stay: 3 nights</p>
+        </div>
+        <div class="column" id="reservation-box">
+          <p style="margin-left: 25px;"><strong>$100 / night</p>
+          <div class="row">
+            <div class="column">
+              <p style="margin-left: 25px;">Check-in Dates</p>
+              <input type="date" name="checkin" placeholder="Check-in" style="margin-left: 25px;">
+            </div>
+            <div class="column">
+              <p style="margin-left: 25px;">Check-out Dates</p>
+              <input type="date" name="checkin" placeholder="Check-in" style="margin-left: 25px;">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <p style="margin-left: 25px;">Guests</p>
+          </div>
+          <button type="button" id="reservation-button">Reserve</button>
+          </div>
+        </div>
+      </div>
+    <br>
+    <h4>Amenities<h4>
+    <br>
+    <hr style="border-top: 3px solid grey;">
+    <h5>Featured</h5>
+    <br>
+      <div class="row">
+        <div class="column">
+          <p>'icon' Children Welcome</p>
+        </div>
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' Satellite or Cable</p>
+        </div>
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' Air Conditioning</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <p>'icon' TV</p>
+        </div>
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' Internet</p>
+        </div>
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' Parking</p>
+        </div>
+      </div>
+    <hr style="border-top: 3px solid grey;">
+    <h5>Safety Features</h5>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Deadbolt lock</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Exterior lighting</p>
+      </div>
+    </div>
+    <hr style="border-top: 3px solid grey;">
+    <h5>General</h5>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Internet</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Parking</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Hair Dryer</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Living Room</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Linens Provided</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Air Conditioning</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Towels Provided</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Telephone</p>
+      </div>
+    </div>
+    <hr style="border-top: 3px solid grey;">
+    <h5>Kitchen</h5>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Stove</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Toaster</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Oven</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>'icon' Refrigerator</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Microwave</p>
+      </div>
+      <div class="column" style="margin-left: 100px;">
+        <p>'icon' Dishes & Utensils</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <p>'icon' Kitchen</p>
+        </div>
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' Coffee Maker</p>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
