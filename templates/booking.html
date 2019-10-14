@@ -18,62 +18,15 @@
     </div>
   </div>
   <div class="container2">
+    {% for apartment in apartments%}
     <div class="zone">
-      <img src="{{ url_for('static', filename='img/mantaray_island_resort.jpeg') }}">
+      <img src="{{ url_for('static', filename='img/' + apartment.image) }}">
       <br>
       <br>
-      <p>Mantaray Island Resort</p>
-      <p><strong>$52/night</strong></p>
+      <p>{{ apartment.name }}</p>
+      <p><strong>${{ apartment.price }}/night</strong></p>
     </div>
-    <div class="zone">
-      <img src="{{ url_for('static', filename='img/south_sea_island_accomodation.jpeg') }}">
-      <br>
-      <br>
-      <p>South Sea Island Accomodation</p>
-      <p><strong>$100/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/funky_fish_beach_surf_resort.jpg')}}">
-      <br>
-      <br>
-      <p>Funky Fish Beach Surf Resort</p>
-      <p><strong>$52/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/the_beachouse.jpg')}}">
-      <br>
-      <br>
-      <p>The Beachouse</p>
-      <p><strong>$54/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/IncredibleSeafrontStudio.webp')}}">
-      <br>
-      <br>
-      <p>Incredible Seafront Studio</p>
-      <p><strong>$70/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/HotelZone.webp')}}">
-      <br>
-      <br>
-      <p>HOTEL ZONE -- BEACHFRONT ROOM #212</p>
-      <p><strong>$51/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/amplio.webp')}}">
-      <br>
-      <br>
-      <p>amplio estudio en la playa</p>
-      <p><strong>$50/night</strong></p>
-    </div>
-    <div class="zone">
-      <img src="{{url_for('static', filename='img/Casatotalmente.webp')}}">
-      <br>
-      <br>
-      <p>Casa totalmente equipada</p>
-      <p><strong>$35/night</strong></p>
-    </div>
+    {% endfor %}
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

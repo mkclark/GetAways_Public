@@ -7,11 +7,14 @@ booking_app = Blueprint('booking_app', __name__)
 
 @booking_app.route('/')
 def index():
-    apartments = Apartments("Cancun Apartment 1")
-    db.session.add(apartments)
-    db.session.commit()
 
-    return render_template('booking.html')
+    # db.session.query(Apartments).filter(Apartments.image == None)
+    # db.update({apartments.image: "no image"}, synchronize_session = False)
+
+
+    apartments = db.session.query(Apartments.name, Apartments.price, Apartments.image).order_by(Apartments.id).all()
+
+    return render_template('booking.html', apartments=apartments)
 
 @booking_app.route('/search_results')
 def search_results():
