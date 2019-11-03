@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GetAways</title>
+  <title><GetAways</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../static/css/style1.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Chilanka">
+</head>
 <body>
     <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;">GetAways</font></h1>
-  <div id="search_box">
-      <input type="text" id="search_input" value>
-      <img src="../static/img/spyglass.png" id="search_box_img">
-  </div>
+  <form action="{{url_for('booking_app.search_results')}}">
+    <div id="search_box">
+        <input type="text" id="search_input" name="search_input">
+        <img src="../static/img/spyglass.png" id="search_box_img">
+        <input type="submit" value="Submit">
+    </div>
+  </form>
 
   <div class="container1">
     <div id="map_box">
@@ -18,7 +22,7 @@
     </div>
   </div>
   <div class="container2">
-    {% for apartment in apartments%}
+    {% for apartment in apartments %}
     <div class="zone">
       <img src="{{ url_for('static', filename='img/' + apartment.image) }}">
       <br>

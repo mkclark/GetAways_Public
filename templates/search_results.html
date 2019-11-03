@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GetAways</title>
-
+  <title>GetAways></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../static/css/style1.css">
-
+</head>
 <body>
     <div class="row">
-      <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;">GetAways</font></h1>
+      <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;"><a href="{{ url_for('booking_app.index') }}">GetAways</a></font></h1>
     </div>
     <div class="row">
       <div id="search_box_2" style="float:left;">
@@ -28,46 +27,18 @@
     </div>
     <div class="row">
       <div class="flex-container-left">
+        {% for apartment in apartments %}
         <div class="search-results-container" id="search-results-box1">
-            <img src="../static/img/S1.jpg" id="img-searchresults-1">
+            <img src="{{ url_for('static', filename='img/' + apartment.image) }}" id="img-searchresults-1">
             <div class="column">
-              <p id="results-name-1"><strong>Vacation Department</p>
-              <p id="results-apt-details-1">2 BR  1 BA  Sleeps 4    90 sq. ft.</p>
+              <p id="results-name-1"><strong>{{ apartment.name }}</p>
+              <p id="results-apt-details-1">{{ apartment.bedrooms }} BR {{ apartment.baths }} BA Sleeps {{ apartment.sleeps }} {{ apartment.sq_ft }}  sq. ft.</p>
               <div id=results-greybar-1>
-                <p id="results-price-1"> $28 per night </p>
+                <p id="results-price-1"> ${{ apartment.price }} per night </p>
               </div>
             </div>
         </div>
-        <div class="search-results-container" id="search-results-box2" >
-            <img src="../static/img/S2.jpg" id="img-searchresults-2">
-            <div class="column">
-              <p id="results-name-2"><strong>Apartment w/incredible sea views</p>
-              <p id="results-apt-details-2">2 BR  2 BA  Sleeps 4    1400 sq. ft.</p>
-              <div id="results-greybar-2">
-                <p id="results-price-2"> $44 per night </p>
-              </div>
-            </div>
-        </div>
-        <div class="search-results-container" id="search-results-box3">
-          <img src="../static/img/S3.jpg" id="img-searchresults-3">
-          <div class="column">
-            <p id="results-name-3"><strong>Mi Estudio en Cancun</p>
-            <p id="results-apt-details-3">2 BR  2 BA  Sleeps 6    970 sq. ft.</p>
-            <div id="results-greybar-3">
-              <p id="results-price-3"> $39 per night </p>
-            </div>
-          </div>
-        </div>
-        <div class="search-results-container" id="search-results-box4" >
-          <img src="../static/img/S4.jpg" id="img-searchresults-4">
-          <div class="column">
-            <p id="results-name-4"><strong>CANCUN Beachfront Condominium</p>
-            <p id="results-apt-details-4">2 BR  1 BA  Sleeps 4    1200 sq. ft.</p>
-            <div id="results-greybar-4">
-              <p id="results-price-4"> $110 per night </p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="flex-container-right">
         <div class="search-results-map">
