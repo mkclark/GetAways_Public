@@ -28,9 +28,10 @@
     <br>
     <br>
     <div class="search-details-container">
+    {% for apartment in apartment %}
       <div class="row">
         <div class="column">
-            <img src="../static/img/s_d_01.webp" class="search-details-img-1">
+            <img src="{{ url_for('static', filename='img/' + apartment.image) }}" class="search-details-img-1">
         </div>
         <div class="column">
             <img src="../static/img/s_d_02.webp" class="search-details-img-2">
@@ -39,18 +40,18 @@
       </div>
     </div>
     <br>
-    <h2 style="font-family: Courier New; margin-left: 25px;">Cancun Beachfront Condominium Apartment on the Hotel Zone excellent location</h2>
+    <h2 style="font-family: Courier New; margin-left: 25px;">{{ apartment.name }}</h2>
     <br>
     <div class="search-details-container" style="justify-content: left;">
       <div class="row" style="margin-left: 25px;">
         <div class="column">
           <p>Apartment</p>
-          <p>Sleeps: 4</p>
-          <p>Bedrooms: 2</p>
+          <p>Sleeps: {{ apartment.sleeps }}</p>
+          <p>Bedrooms: {{ apartment.bedrooms }}</p>
           <p>Min Stay: 3 nights</p>
         </div>
         <div class="column" id="reservation-box">
-          <p style="margin-left: 25px;"><strong>$100 / night</p>
+          <p style="margin-left: 25px;"><strong>${{ apartment.price }} / night</p>
           <div class="row">
             <div class="column">
               <p style="margin-left: 25px;">Check-in Dates</p>
@@ -69,6 +70,7 @@
           </div>
         </div>
       </div>
+    {% endfor %}
     <br>
     <h4>Amenities<h4>
     <br>
@@ -76,37 +78,25 @@
     <h5>Featured</h5>
     <br>
       <div class="row">
-        <div class="column">
-          <p>'icon' Children Welcome</p>
-        </div>
+        {% for apartment_details_featured in apartment_details_featured %}
         <div class="column" style="margin-left: 100px;">
-          <p>'icon' Satellite or Cable</p>
+          <p>'icon' {{ apartment_details_featured.feature_name}}</p>
         </div>
-        <div class="column" style="margin-left: 100px;">
-          <p>'icon' Air Conditioning</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column">
-          <p>'icon' TV</p>
-        </div>
-        <div class="column" style="margin-left: 100px;">
-          <p>'icon' Internet</p>
-        </div>
-        <div class="column" style="margin-left: 100px;">
-          <p>'icon' Parking</p>
-        </div>
+        {% endfor %}
       </div>
     <hr style="border-top: 3px solid grey;">
     <h5>Safety Features</h5>
     <div class="row">
-      <div class="column">
-        <p>'icon' Deadbolt lock</p>
-      </div>
+      {% for apartment_details_safety_features in apartment_details_safety_features %}
       <div class="column" style="margin-left: 100px;">
-        <p>'icon' Exterior lighting</p>
+        <p>'icon' {{ apartment_details_safety_features.feature_name }}</p>
       </div>
+      {% endfor %}
     </div>
+
+
+
+
     <hr style="border-top: 3px solid grey;">
     <h5>General</h5>
     <div class="row">
