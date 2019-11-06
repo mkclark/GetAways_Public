@@ -86,84 +86,31 @@
       </div>
     <hr style="border-top: 3px solid grey;">
     <h5>Safety Features</h5>
-    <div class="row">
-      {% for apartment_details_safety_features in apartment_details_safety_features %}
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' {{ apartment_details_safety_features.feature_name }}</p>
+      <div class="row">
+        {% for apartment_details_safety_features in apartment_details_safety_features %}
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' {{ apartment_details_safety_features.feature_name }}</p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-
-
-
-
     <hr style="border-top: 3px solid grey;">
     <h5>General</h5>
-    <div class="row">
-      <div class="column">
-        <p>'icon' Internet</p>
+      <div class="row">
+        {% for apartment_details_general in apartment_details_general %}
+        <div class="column" style="margin-left: 100px;">
+          <p>'icon' {{ apartment_details_general.feature_name }}</p>
+        </div>
+        {% endfor %}
       </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Parking</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Hair Dryer</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <p>'icon' Living Room</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Linens Provided</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Air Conditioning</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <p>'icon' Towels Provided</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Telephone</p>
-      </div>
-    </div>
     <hr style="border-top: 3px solid grey;">
     <h5>Kitchen</h5>
-    <div class="row">
-      <div class="column">
-        <p>'icon' Stove</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Toaster</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Oven</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <p>'icon' Refrigerator</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Microwave</p>
-      </div>
-      <div class="column" style="margin-left: 100px;">
-        <p>'icon' Dishes & Utensils</p>
-      </div>
       <div class="row">
-        <div class="column">
-          <p>'icon' Kitchen</p>
+        {% for apartment_details_kitchen in apartment_details_kitchen %}
+        <div class="column" style="margin-left:100 px;">
+          <p>'icon' {{ apartment_details_kitchen.feature_name }}</p>
         </div>
-        <div class="column" style="margin-left: 100px;">
-          <p>'icon' Coffee Maker</p>
-        </div>
+        {% endfor %}
       </div>
-    </div>
-
-
-    </div>
 </body>
 
 </html>

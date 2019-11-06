@@ -54,6 +54,6 @@ def search_details():
     apartment_details_featured = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'Featured')
     apartment_details_safety_features = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'Safety Features')
     apartment_details_general = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'General')
+    apartment_details_kitchen = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id=='12', ApartmentFeatures.category == 'Kitchen')
 
-
-    return render_template('search_details.html', apartment=apartment, apartment_details_featured=apartment_details_featured)
+    return render_template('search_details.html', apartment=apartment, apartment_details_featured=apartment_details_featured, apartment_details_safety_features=apartment_details_safety_features, apartment_details_general=apartment_details_general, apartment_details_kitchen=apartment_details_kitchen)
