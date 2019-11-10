@@ -31,7 +31,7 @@
         <div class="search-results-container" id="search-results-box1">
             <img src="{{ url_for('static', filename='img/' + apartment.image) }}" id="img-searchresults-1">
             <div class="column">
-              <p id="results-name-1"><strong>{{ apartment.name }}</p>
+              <p id="results-name-1"><strong><a href="{{ url_for('booking_app.search_details', ID=apartment.id)}}">{{ apartment.name }}</a></p>
               <p id="results-apt-details-1">{{ apartment.bedrooms }} BR {{ apartment.baths }} BA Sleeps {{ apartment.sleeps }} {{ apartment.sq_ft }}  sq. ft.</p>
               <div id=results-greybar-1>
                 <p id="results-price-1"> ${{ apartment.price }} per night </p>

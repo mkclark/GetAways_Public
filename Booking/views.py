@@ -42,15 +42,15 @@ def search_results():
 
     location = request.args.get('search_input')
 
-    search_result_apartments = db.session.query(Apartments.name, Apartments.price, Apartments.image, Apartments.baths, Apartments.bedrooms, Apartments.sleeps, Apartments.sq_ft).order_by(Apartments.id).filter(Apartments.location == location)
+    search_result_apartments = db.session.query(Apartments.id, Apartments.name, Apartments.price, Apartments.image, Apartments.baths, Apartments.bedrooms, Apartments.sleeps, Apartments.sq_ft).order_by(Apartments.id).filter(Apartments.location == location)
 
     return render_template('search_results.html', apartments=search_result_apartments, location=location)
 
 
-@booking_app.route('/search_details', methods=['GET', 'POST'])
-def search_details():
+@booking_app.route('/search_details/<ID>', methods=['GET', 'POST'])
+def search_details(ID):
 
-    apartment = db.session.query(Apartments.name, Apartments.price, Apartments.image, Apartments.baths, Apartments.bedrooms, Apartments.sleeps).filter(Apartments.id == '12')
+    apartment = db.session.query(Apartments.name, Apartments.price, Apartments.image, Apartments.baths, Apartments.bedrooms, Apartments.sleeps).filter(Apartments.id == ID)
     apartment_details_featured = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'Featured')
     apartment_details_safety_features = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'Safety Features')
     apartment_details_general = db.session.query(ApartmentFeatures.feature_name).order_by(ApartmentFeatures.id).filter(ApartmentFeatures.apartment_id == '12', ApartmentFeatures.category == 'General')
