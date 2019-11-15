@@ -1,0 +1,171 @@
+.page-header {
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.page-container {
+  display: flex;
+}
+
+.left-nav-body-container {
+  left: 0;
+  width: 256px;
+  border: 2px solid red;
+}
+
+.account-settings-container {
+  padding-left: 300px;
+  background-color: #EBEBEB;
+  width:  100%;
+}
+
+.element-account {
+  position: static;
+  border: 2px solid grey;
+  width: 900px;
+  height: 650px;
+  margin-top: 50px;
+  background-color: #FFFFFF;
+}
+
+.element-security {
+  border: 2px solid grey;
+  width: 900px;
+  height: 503px;
+  margin-top: 50px;
+  background-color: #FFFFFF;
+}
+
+.title {
+  margin: 25px 50px 25px;
+  font-family: "Arial Bold";
+  font-size: 21px;
+  font-weight: 600;
+  display: block;
+}
+
+.input-container {
+  font: 16px;
+  margin: 50px;
+}
+
+.row {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+.firstname {
+  width: 350px;
+  height: 40px;
+}
+
+.lastname {
+  width: 350px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+.email {
+  width: 350px;
+  height: 40px;
+}
+
+.country-code {
+  width: 50px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+#phone {
+  width: 275px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+#company {
+  width: 725px;
+  height: 40px;
+  margin-top: 25px;
+}
+
+#billing-address {
+  width: 725px;
+  height: 40px;
+}
+
+#city {
+  width: 350px;
+  height: 40px;
+}
+
+#states {
+  width: 350px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+#zip-code {
+  width: 350px;
+  height: 40px;
+}
+
+#country {
+  width: 350px;
+  height: 40px;
+  margin-left: 25px;
+}
+
+#mailing-address-checkbox {
+  margin-left: 50px;
+}
+
+.parent-table {
+  width: 725px;
+  height: 150px;
+  background-color: grey;
+  border-radius: 2px;
+  border-color: black;
+
+}
+
+.parent-header {
+
+}
+
+.parent-body {
+
+}
+
+.col-1-header {
+  float: left;
+  display: inline-flex;
+}
+
+.col-2-header {
+  display: inline-flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div {
+  display: block;
+}

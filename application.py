@@ -20,8 +20,10 @@ def create_app(**config_overrides):
 
     # import blueprints
     from booking.views import booking_app
+    from hosting.views import hosting_app
 
     # register blueprints
     app.register_blueprint(booking_app)
+    app.register_blueprint(hosting_app)
 
     return app
