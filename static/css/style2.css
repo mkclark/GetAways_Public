@@ -124,32 +124,57 @@
 
 .parent-table {
   width: 725px;
-  height: 150px;
-  background-color: grey;
-  border-radius: 2px;
-  border-color: black;
+  height: 100px;
+  background-color: white;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  margin-left: 50px;
 
 }
 
 .parent-header {
-
+  border-color: grey;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
 }
 
 .parent-body {
-
+  display: flex;
 }
 
 .col-1-header {
   float: left;
   display: inline-flex;
+  margin-left: 50px;
 }
 
 .col-2-header {
   display: inline-flex;
+  margin-left: 150px;
 }
 
+.col-3-header {
+  display: inline-flex;
+  margin-left: 200px;
+}
 
+#add-new-card-button {
+  width: 170px;
+  height: 50px;
+  background-color: #0978CC;
+  color: white;
+  border-radius: 25px;
+}
 
+#paypal-button {
+  width: 115px;
+  height: 50px;
+  background-color: #7ABCD6;
+  color: white;
+  border-radius: 5px;
+  margin-left: 50px;
+}
 
 
 
