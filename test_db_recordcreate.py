@@ -1,3 +1,4 @@
+# this file is only for testing record creation on the db
 from application import create_app
 from booking.models import Apartments, ApartmentFeatures
 from flask_sqlalchemy import SQLAlchemy
