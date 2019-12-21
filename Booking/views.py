@@ -14,26 +14,6 @@ def index():
 
     apartments = db.session.query(Apartments.name, Apartments.price, Apartments.image).order_by(Apartments.id).all()
 
-######
-
-    # # creating an apartments
-    # cancun_apartment = Apartments('OCEANFRONT - CASA MAYA PLAYA - BEST LOCATION IN THE FABULOUS HOTEL ZONE', '383', 'Casatotalmente.webp', 'Cancun', '2', '2', '3', '700')
-    #
-    # # adding the new apartment to the database
-    # db.session.add(cancun_apartment)
-    # db.session.commit()
-    #
-    # # creating features for the apartment
-    #
-    # cancun_apartment_feature1 = ApartmentFeatures('Children Welcome', cancun_apartment.id, 'Featured')
-    # cancun_apartment_feature2 = ApartmentFeatures('TV', cancun_apartment.id, 'Featured')
-    #
-    # db.session.add_all([cancun_apartment_feature1, cancun_apartment_feature2])
-    # db.session.commit()
-
-#######
-
-
     return render_template('booking.html', apartments=apartments)
 
 

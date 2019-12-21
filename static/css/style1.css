@@ -377,23 +377,23 @@ p {
 }
 
 .search-details-img-1 {
-  display: flex;
-  height: 80px;
-  width: 900px;
+  display: inline-block;
+  max-height: 100%;
+  max-width: 300px;
   flex: 1;
 }
 
 .search-details-img-2 {
-  display: flex;
-  height: 40px;
-  width: 540px;
+  display: inline-block;
+  max-height: 50%;
+  max-width: 100%;
   flex: 1;
 }
 
 .search-details-img-3 {
-  display: flex;
-  height: 40px;
-  width: 540px;
+  display: inline-block;
+  max-height: 50%;
+  max-width: 100%;
   flex: 1;
 }
 

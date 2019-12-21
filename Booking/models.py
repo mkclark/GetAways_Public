@@ -15,7 +15,6 @@ class Apartments(db.Model):
     sq_ft = db.Column(db.Integer, nullable=True)
     features = db.relationship('ApartmentFeatures', backref='apartment', lazy='dynamic') # use 'dynamic' on pretty much all the use cases. Check the documentation for more info. It's something about how it loads or something.
 
-
     # creates the object for the first time
     def __init__(self, name, price, image, location, bedrooms, baths, sleeps, sq_ft):
         self.name = name
@@ -29,7 +28,7 @@ class Apartments(db.Model):
 
     # 'repr' method prints the data in the terminal
     def __repr__(self):
-        return f'<Name {self.name}, Price {self.price}>, Image {self.image}, Location {self.location}, Bedrooms {self.bedrooms}, Baths {self.baths}, Sleeps {self.sleeps}, Square Footage {self.sq_ft}'
+        return f'Name {self.name}, Price {self.price}>, Image {self.image}, Location {self.location}, Bedrooms {self.bedrooms}, Baths {self.baths}, Sleeps {self.sleeps}, Square Footage {self.sq_ft}'
 
 
 class ApartmentFeatures(db.Model):

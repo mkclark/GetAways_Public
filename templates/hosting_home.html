@@ -3,27 +3,27 @@
 <head>
   <title>Account Settings</title>
   <link rel="stylesheet" type="text/css" href="../static/css/style2.css">
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript"  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+  <script type="text/javascript" src="../static/js/js1.js"></script>
+
+  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+
 
 </head>
 <body>
-  <div class="page-header">
-    <p>GetAways</p>
+  <div class="row">
+    <h1 class="page-header"><font color="#3F5DA6" style="font-family:Impact; font-size:55px;"><a href="{{ url_for('booking_app.index') }}">GetAways</a></font></h1>
   </div>
-
   <div class="page-container">
-
     <div class="left-nav-body-container">
-
     </div>
-
     <div class="account-settings-container">
       <div class="element-account">
         <span class="title">Account Holder</span>
         <form>
           <div class="input-container">
-            <div class="row">
+            <div class="row">1
               <div class="col">
                 <input class="form-control firstname" id="firstname" type="text" name="firstname" placeholder="First Name">
               </div>
@@ -592,26 +592,72 @@
           </div>
         </div>
       </div>
-
       <div class="element-payment">
         <span class="title">Payment Methods</span>
         <div class="row">
           <p>Manage your credit card information and payment preferences by listing.</p>
         </div>
-          <div class="parent-table">
-            <div class="parent-header">
-              <p class="col-1-header-payments">Account info</p>
-              <p class="col-2-header-payments">Expiration Date</p>
-              <p class="col-3-header-payments">Edit/Delete</p>
+        <div class="parent-table">
+          <div class="parent-header">
+            <p class="col-1-header-payments">Account info</p>
+            <p class="col-2-header-payments">Expiration Date</p>
+            <p class="col-3-header-payments">Edit/Delete</p>
+          </div>
+          <div class="parent-body" style="margin-left: 25px;">
+            <p id="no-card-message">No cards on file. If you would like to auto-renew with a credit cart, please add a card.</p>
+            <p id="new-card-msg">Add a new credit card</P>
+          </div>
+
+          <form id="payment-form" method="POST" action="{{ url_for('hosting_app.hosting')}}" style="display: table;">
+            {{ form.hidden_tag() }}
+            <div>
+              Name on card <input type="text" name="name" required type="text">
             </div>
-            <div class="row">
-              <p id="no-card-message">No cards on file. If you would like to auto-renew with a credit cart, please add a card.</p>
+            <div>
+              Card number <input type="number" name="credit_card" required type="number">
             </div>
+            <div>
+            <label for="exp_month">Expiration date</label>
+            <select name="exp_month">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select id="exp_year" name="exp_year"></select>
+            </div>
+            <div>
+              Security code <input type="number" name="security_code" required type="number">
+            </div>
+            <div>
+              Address <input type="text" name="address" required type="text">
+            </div>
+            <div>
+              Address 2 <input type="text" name="address_2" required type="text">
+            </div>
+            <div>
+              City <input type="text" name="city" required type="text">
+            </div>
+            <div>
+              <button id="cancel-button">Cancel</button>
+              <input type="submit" value="Save">
+            </div>
+          </form>
         </div>
+
         <div class="row">
           <button id="add-new-card-button">Add a new card</button>
           <button id="paypal-button">Paypal</button>
         </div>
+
         <span class="title"> My Listings</span>
         <div class="row">
           <p>We will process your renewal a few days prior to your renewal date to confirm your credit card information to avoid any lapse in your subscription</p>
@@ -642,9 +688,7 @@
 </body>
 
 <script>
-$(":input").inputmask();
 
-$("#phone").inputmask({"mask": "(999) 999-9999"});
 </script>
 
 </html>
