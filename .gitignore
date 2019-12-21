@@ -8,4 +8,4 @@ __pycache__
 *.log
 venv
 static/img
-.flaskenv
+*.flaskenv
